@@ -6,7 +6,7 @@
 # Instructions
 
 This was time limited task which was done for a job interview, it was for a frontend part but I did the full stack requirement.
-It was one under 8 hours for both. Because time limitations not all pats are polished, probably will do it at some later time.
+It was done under 8 hours for both. Because time limitations not all pats are polished, probably will do it at some later time.
 
 ## Requirements:
 
