@@ -24,6 +24,14 @@ It was one under 8 hours for both. Because time limitations not all pats are pol
   - The deposit is submitted to the API (see below)
   - User can see their deposited balances (token / amount)
 
+## What didnt done because time limitations and can be done
+
+- Responsive part
+- Typescript
+- Optimize data fetching part
+- Tests
+- And general code polishing
+
 ## System Requirements
 
 - Node.js 12.22.0 or later
@@ -38,4 +46,5 @@ It was one under 8 hours for both. Because time limitations not all pats are pol
 ## Starting the server
 
 - Run `npm run dev` or `yarn dev` to start the development server on `http://localhost:3000`
+- Run `npm run build` or `yarn run build` to build the production and them `npm run start` or `yarn run start` to start a production server on `http://localhost:3000`
 - Visit `http://localhost:3000` to view your application
