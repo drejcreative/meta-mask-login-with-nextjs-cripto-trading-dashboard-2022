@@ -1,0 +1,23 @@
+.orders {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid var(--background);
+  h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 50px;
+    font-weight: bold;
+    color: var(--focus);
+    border-bottom: 1px solid var(--focus);
+    padding: 10px 0px;
+  }
+  .order {
+    padding: 10px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 50px;
+    border-bottom: 1px solid var(--background);
+  }
+}

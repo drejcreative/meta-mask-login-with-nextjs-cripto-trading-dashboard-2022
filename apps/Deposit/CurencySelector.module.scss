@@ -1,0 +1,51 @@
+.currenty {
+  h3 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    border: 1px solid var(--main);
+    border-radius: 8px;
+
+    .checked {
+      background-color: #f6851452;
+    }
+
+    .currentyName {
+      width: 100px;
+    }
+
+    li {
+      padding: 10px;
+      display: flex;
+      display: flex;
+      justify-content: space-between;
+      cursor: pointer;
+      span {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+        margin-right: 10px;
+      }
+    }
+    .info {
+      width: 150px;
+      display: flex;
+      flex-direction: column;
+      align-items: baseline;
+      span {
+        &:first-child {
+          font-size: 0.8rem;
+          margin-bottom: 5px;
+        }
+        &:last-child {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
