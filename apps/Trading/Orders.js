@@ -1,6 +1,6 @@
 import { TiDelete } from "react-icons/ti";
 
-import { Loader } from "../../components/Loader/Loader";
+import { Loader, LoaderWrap } from "../../components/Loader/Loader";
 import useOrders from "../../hooks/useOrders";
 import fetcher from "../../utils/fetcher";
 
@@ -13,10 +13,14 @@ const Orders = () => {
   if (orderLoading) return <Loader />;
 
   const deleteOrder = async (id) => {
-    await fetcher("api/cancelOrder", "DELETE", {
-      id,
-      auth: "auth",
-    });
+    try {
+      await fetcher("api/cancelOrder", "DELETE", {
+        id,
+        auth: "auth",
+      });
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -39,8 +43,12 @@ const Orders = () => {
               <p>{order.ammount}</p>
               <p>${order.price}</p>
               <p>${order.ammount * order.price}</p>
-              <p>
-                <TiDelete size={16} onClick={() => deleteOrder(order.id)} />
+              <p
+                className={styles.button}
+                onClick={() => deleteOrder(order.id)}
+              >
+                Cancel
+                <TiDelete size={16} />
               </p>
             </div>
           );

@@ -20,26 +20,34 @@ const Trading = () => {
 
   const onBuy = async () => {
     setLoading("buy");
-    await fetcher("api/placeOrder", "POST", {
-      side: "buy",
-      ammount,
-      token,
-      price: PRICES[token],
-      auth: "auth",
-    });
+    try {
+      await fetcher("api/placeOrder", "POST", {
+        side: "buy",
+        ammount,
+        token,
+        price: PRICES[token],
+        auth: "auth",
+      });
+    } catch (error) {
+      console.log(error);
+    }
     setLoading(false);
     setAmmount("");
   };
 
   const onSell = async () => {
     setLoading("sell");
-    await fetcher("api/placeOrder", "POST", {
-      side: "sell",
-      ammount,
-      token,
-      price: PRICES[token],
-      auth: "auth",
-    });
+    try {
+      await fetcher("api/placeOrder", "POST", {
+        side: "sell",
+        ammount,
+        token,
+        price: PRICES[token],
+        auth: "auth",
+      });
+    } catch (error) {
+      console.log(error);
+    }
     setAmmount("");
     setLoading(false);
   };

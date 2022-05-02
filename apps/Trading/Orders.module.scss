@@ -8,7 +8,7 @@
   }
   .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 100px;
     font-weight: bold;
     color: var(--focus);
     border-bottom: 1px solid var(--focus);
@@ -17,7 +17,19 @@
   .order {
     padding: 10px 0px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 50px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 100px;
     border-bottom: 1px solid var(--background);
+  }
+  .button {
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    cursor: pointer;
+    background: var(--focus);
+    color: var(--light);
+    border: 1px solid var(--focus);
   }
 }
